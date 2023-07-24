@@ -134,5 +134,8 @@
   <ItemGroup>
     <Resource Include="Images\setting.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
