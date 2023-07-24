@@ -1,0 +1,83 @@
+﻿<Window x:Class="WPF_LoginForm.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_LoginForm.Views"
+        xmlns:viewModel="clr-namespace:WPF_LoginForm.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindowView" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen" WindowStyle="None">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF0A2B5E" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock Text="{Binding CurrentUserAccount.DisplayName}"
+            FontSize="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" Margin="10,10,0,0" Foreground="White"/>
+        <Button Content="Balance" HorizontalAlignment="Left" Margin="36,119,0,0" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0,0" Opacity="1" Background="{x:Null}" Click="Button_Click" Foreground="White" FontWeight="Bold" FontSize="20" BorderThickness="0,0,0,0">
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2"/>
+                </TransformGroup>
+            </Button.LayoutTransform>
+        </Button>
+        <Button Content="Invest" HorizontalAlignment="Left" Margin="23,177,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0,0" Opacity="1" Background="{x:Null}" Click="Button_Click" Foreground="White" FontWeight="Bold" FontSize="20" BorderThickness="0,0,0,0">
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2"/>
+                </TransformGroup>
+            </Button.LayoutTransform>
+        </Button>
+        <Button Content="Contact" HorizontalAlignment="Left" Margin="29,234,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0,0" Opacity="1" Background="{x:Null}" Click="Button_Click" Foreground="White" FontWeight="Bold" FontSize="20" BorderThickness="0,0,0,0">
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2"/>
+                </TransformGroup>
+            </Button.LayoutTransform>
+        </Button>
+        <Button Content="Setting" HorizontalAlignment="Left" Margin="26,291,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0,0" Opacity="1" Background="{x:Null}" Click="Button_Click" Foreground="White" FontWeight="Bold" FontSize="20" BorderThickness="0,0,0,0">
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2"/>
+                </TransformGroup>
+            </Button.LayoutTransform>
+        </Button>
+        <Button x:Name="logout1" Content="Logout" HorizontalAlignment="Left" Margin="652,382,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0,0" Opacity="1" Background="{x:Null}" Click="Button_Click" Foreground="White" FontWeight="Bold" FontSize="20" BorderThickness="0,0,0,0">
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2"/>
+                </TransformGroup>
+            </Button.LayoutTransform>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="31" Margin="20,119,0,0" VerticalAlignment="Top" Width="31" Source="/Images/icons8-balance-64.png"/>
+        <Image HorizontalAlignment="Left" Height="31" Margin="20,177,0,0" VerticalAlignment="Top" Width="31" Source="/Images/investment.png"/>
+        <Image HorizontalAlignment="Left" Height="31" Margin="20,232,0,0" VerticalAlignment="Top" Width="31" Source="/Images/telephone.png"/>
+        <Image HorizontalAlignment="Left" Height="31" Margin="20,291,0,0" VerticalAlignment="Top" Width="31" Source="/Images/setting.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="226,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="405" Text="Current Balance 2000€" FontWeight="Bold" FontSize="48"/>
+        <Image HorizontalAlignment="Center" Height="450" VerticalAlignment="Center" Width="800" Source="/Images/back-image.jpg" Stretch="Fill" Opacity="0.105" Panel.ZIndex="-1"/>
+    </Grid>
+</Window>
